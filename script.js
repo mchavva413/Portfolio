@@ -1,21 +1,21 @@
-// Function to open a specific section when a tab is clicked
-function openSection(evt, sectionName) {
-    var i, tabcontent, tablinks;
-    
-    // Hide all sections
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].classList.remove("active");
+function openSection(sectionId) {
+    document.querySelectorAll('.section').forEach(sec => {
+        sec.style.display = 'none';
+    });
+    document.getElementById(sectionId).style.display = 'block';
+
+    if (sectionId === 'projects') {
+        showProjectType('cpp');
     }
-    
-    // Remove active class from all tabs
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-    }
-    
-    // Show the clicked section and add active class to the clicked tab
-    document.getElementById(sectionName).classList.add("active");
-    evt.currentTarget.classList.add("active");
 }
+
+function showProjectType(type) {
+    document.querySelectorAll('.project-group').forEach(group => {
+        group.style.display = 'none';
+    });
+    document.getElementById(type).style.display = 'block';
+}
+
+// Default open About
+openSection('about');
 

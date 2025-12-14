@@ -3,80 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manasa Naga Venkata Sai Akshit Chavva | Portfolio</title>
+    <title>Akshit Chavva | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p><em>Click below to explore my work and skills!</em></p>
-    </header>
 
-    <!-- Navigation Section -->
-    <nav>
-        <ul>
-            <li><button class="tablink" onclick="openSection(event, 'about')">About Me</button></li>
-            <li><button class="tablink" onclick="openSection(event, 'skills')">Skills</button></li>
-            <li><button class="tablink" onclick="openSection(event, 'projects')">Projects</button></li>
-            <li><button class="tablink" onclick="openSection(event, 'contact')">Contact</button></li>
-        </ul>
-    </nav>
+<header>
+    <h1>Manasa Naga Venkata Sai Akshit Chavva</h1>
+    <p>Software Engineer | C++ | Systems | AI</p>
+</header>
 
-    <!-- Content Sections -->
-    <div id="about" class="tabcontent">
-        <h2>About Me</h2>
-        <p>
-            Hello, I'm Manasa Naga Venkata Sai Akshit Chavva, a Software Engineer with a strong foundation in algorithms, data structures, and high-performance systems development. I specialize in building low-latency, scalable backend services using C++ and Python, with hands-on experience in distributed systems, real-time data processing, and cloud infrastructure. I am passionate about building resilient, high-performance financial and research platforms at scale.
-        </p>
+<!-- MAIN NAV -->
+<nav>
+    <button class="tablink" onclick="openSection(event,'about')">About</button>
+    <button class="tablink" onclick="openSection(event,'skills')">Skills</button>
+    <button class="tablink" onclick="openSection(event,'projects')">Projects</button>
+    <button class="tablink" onclick="openSection(event,'contact')">Contact</button>
+</nav>
+
+<!-- ABOUT -->
+<section id="about" class="tabcontent">
+    <h2>About Me</h2>
+    <p>
+        Software Engineer with strong foundations in algorithms, data structures, and
+        high-performance systems. Experienced in low-latency C++ systems, distributed
+        backend services, and AI-driven applications.
+    </p>
+    <p>
+        Previously worked at Amazon and Dragonfly Natives, building scalable,
+        production-grade systems used under high throughput workloads.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="tabcontent">
+    <h2>Skills</h2>
+    <ul>
+        <li><b>Languages:</b> C++, Python, JavaScript, SQL</li>
+        <li><b>Systems:</b> Linux, Multithreading, Low-Latency Systems</li>
+        <li><b>Backend:</b> FastAPI, Flask, REST APIs, WebSockets</li>
+        <li><b>Frontend:</b> HTML, CSS, React</li>
+        <li><b>Databases:</b> SQLite, PostgreSQL, MongoDB, MySQL</li>
+        <li><b>Tools:</b> Git, Docker, AWS</li>
+    </ul>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="tabcontent">
+
+    <h2>Projects</h2>
+
+    <!-- PROJECT CATEGORY BUTTONS -->
+    <div class="subnav">
+        <button onclick="openProjectCategory('cpp')">C++ Projects</button>
+        <button onclick="openProjectCategory('ai')">AI Projects</button>
     </div>
 
-    <div id="skills" class="tabcontent">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Languages:</strong> Python, C/C++, JavaScript, SQL</li>
-            <li><strong>Systems & Backend:</strong> Linux, FastAPI, Flask, Multi-Threading, REST APIs, WebSockets, Low-Latency Systems</li>
-            <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Node.js, React</li>
-            <li><strong>Databases:</strong> SQLite, PostgreSQL, MongoDB, MySQL</li>
-            <li><strong>Tools:</strong> Git, Docker, AWS, Linux</li>
-            <li><strong>Core CS:</strong> Data Structures, Algorithms, Concurrency, Performance Optimization, System Design</li>
-        </ul>
-    </div>
+    <!-- ================= C++ PROJECTS ================= -->
+    <div id="cpp" class="project-category">
 
-    <div id="projects" class="tabcontent">
-        <h2>Projects</h2>
-        <h3>Matching Engine C++ Trading System</h3>
-        <p><strong>Oct 2025</strong></p>
+        <h3>Matching Engine – C++ Trading System</h3>
         <ul>
-            <li>Built a high-performance C++ matching engine implementing bid/ask order book management, FIFO queues, partial fills, and cancel/modify logic optimized for nanosecond-precision event handling.</li>
-            <li>Designed cache-efficient memory layouts, custom containers, and lightweight data structures to reduce latency in real-time execution workloads.</li>
-            <li>Successfully handled millions of messages per second, aligning with the demands of high-frequency trading systems.</li>
-            <li><a href="https://github.com/mchavva413/matching-engine" target="_blank">View Project</a></li>
+            <li>Implemented full bid/ask order book with FIFO matching logic.</li>
+            <li>Optimized cache-efficient memory layouts for ultra-low latency.</li>
+            <li>Built multithreaded processing with deterministic execution.</li>
+            <li>Handled millions of messages per second under stress tests.</li>
         </ul>
-        
+        <a href="https://github.com/mchavva413/matching-engine" target="_blank">GitHub →</a>
+
+        <hr>
+
         <h3>Real-Time Feed Handler</h3>
-        <p><strong>Nov 2025</strong></p>
         <ul>
-            <li>Developed a real-time market data feed handler with a C++ core processor, Python tick simulator, and SQLite for durable storage, allowing efficient data capture under tight latency constraints.</li>
-            <li>Built a live command-line dashboard to monitor market depth updates, latency metrics, and internal queue states for debugging.</li>
-            <li><a href="https://github.com/mchavva413/real-time-feed-handler" target="_blank">View Project</a></li>
+            <li>Built a real-time market data ingestion pipeline in C++.</li>
+            <li>Integrated Python tick simulator and SQLite storage.</li>
+            <li>Designed CLI dashboard for latency and queue monitoring.</li>
+            <li>Maintained throughput during aggressive input spikes.</li>
         </ul>
+        <a href="https://github.com/mchavva413/real-time-feed-handler" target="_blank">GitHub →</a>
+
+        <hr>
+
+        <h3>Real-Time Linux Monitoring Dashboard</h3>
+        <ul>
+            <li>Collected live CPU, memory, IO, and network metrics.</li>
+            <li>Backend built with FastAPI and WebSockets.</li>
+            <li>Sub-second streaming updates to frontend.</li>
+            <li>Used for performance debugging under high load.</li>
+        </ul>
+        <a href="https://github.com/mchavva413/Real-Time-Linux-Monitoring-Dashboard" target="_blank">GitHub →</a>
+
     </div>
 
-    <div id="contact" class="tabcontent">
-        <h2>Contact</h2>
-        <p>If you'd like to get in touch or learn more about my work, feel free to reach out!</p>
-        <p>Email: <a href="mailto:chavvaakshit9495@gmail.com">chavvaakshit9495@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/akshit-chavva" target="_blank">View LinkedIn</a></p>
-        <p>GitHub: <a href="https://github.com/mchavva413" target="_blank">View GitHub</a></p>
+    <!-- ================= AI PROJECTS ================= -->
+    <div id="ai" class="project-category" style="display:none">
+
+        <h3>Self-Correcting RAG Pipeline</h3>
+        <ul>
+            <li>Built a multi-agent RAG system using Ollama and LangChain.</li>
+            <li>Implemented verification loops to reduce hallucinations.</li>
+            <li>Dynamic feedback improved factual accuracy by ~37%.</li>
+            <li>Optimized retrieval latency and relevance scoring.</li>
+        </ul>
+        <a href="https://github.com/mchavva413/self-correcting-rag" target="_blank">GitHub →</a>
+
+        <hr>
+
+        <h3>Multi-Agent Automation System</h3>
+        <ul>
+            <li>Designed Researcher-Writer-Reviewer agent workflow.</li>
+            <li>Orchestrated local LLMs using Ollama.</li>
+            <li>Built Streamlit UI for live agent monitoring.</li>
+            <li>Improved content generation speed by ~30%.</li>
+        </ul>
+        <a href="https://github.com/mchavva413/multi-agent-automator-ollama" target="_blank">GitHub →</a>
+
+        <hr>
+
+        <h3>AI Fraud Detection System</h3>
+        <ul>
+            <li>Built real-time credit card fraud detection system.</li>
+            <li>Used ML models with explainable AI (XAI).</li>
+            <li>Streamlit dashboard for predictions and insights.</li>
+            <li>Focused on interpretability and accuracy.</li>
+        </ul>
+        <a href="https://github.com/mchavva413/ai-fraud-detection" target="_blank">GitHub →</a>
+
     </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Manasa Naga Venkata Sai Akshit Chavva. All rights reserved.</p>
-    </footer>
+</section>
 
-    <script src="script.js"></script>
+<!-- CONTACT -->
+<section id="contact" class="tabcontent">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:chavvaakshit9495@gmail.com">chavvaakshit9495@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/mchavva413" target="_blank">github.com/mchavva413</a></p>
+    <p>LinkedIn: <a href="#" target="_blank">LinkedIn Profile</a></p>
+</section>
+
+<footer>
+    <p>© 2025 Akshit Chavva</p>
+</footer>
+
+<script>
+function openSection(evt, name) {
+    document.querySelectorAll('.tabcontent').forEach(t => t.style.display='none');
+    document.getElementById(name).style.display = 'block';
+}
+
+function openProjectCategory(category) {
+    document.getElementById('cpp').style.display = 'none';
+    document.getElementById('ai').style.display = 'none';
+    document.getElementById(category).style.display = 'block';
+}
+</script>
+
 </body>
 </html>
 
