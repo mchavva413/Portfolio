@@ -1,20 +1,104 @@
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
+/* Header Styles */
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
 }
 
-section {
-  padding: 20px;
-  margin: 20px;
-  background-color: #fff;
+/* Navigation Styles */
+nav {
+    background-color: #007bff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li button {
+    background-color: #fff;
+    border: 1px solid #007bff;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+nav ul li button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Tabbed Content */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabcontent h2, .tabcontent h3 {
+    color: #333;
+}
+
+.tabcontent ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tabcontent ul li {
+    margin-bottom: 15px;
+}
+
+.tabcontent a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.tabcontent a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Active Tab */
+.tabcontent.active {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .tabcontent {
+        margin: 10px;
+        padding: 15px;
+    }
 }
 

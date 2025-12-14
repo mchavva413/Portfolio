@@ -10,21 +10,28 @@
     <!-- Header Section -->
     <header>
         <h1>Welcome to My Portfolio</h1>
+        <p><em>Click below to explore my work and skills!</em></p>
     </header>
 
-    <!-- About Me Section -->
-    <section id="about">
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><button class="tablink" onclick="openSection(event, 'about')">About Me</button></li>
+            <li><button class="tablink" onclick="openSection(event, 'skills')">Skills</button></li>
+            <li><button class="tablink" onclick="openSection(event, 'projects')">Projects</button></li>
+            <li><button class="tablink" onclick="openSection(event, 'contact')">Contact</button></li>
+        </ul>
+    </nav>
+
+    <!-- Content Sections -->
+    <div id="about" class="tabcontent">
         <h2>About Me</h2>
         <p>
             Hello, I'm Manasa Naga Venkata Sai Akshit Chavva, a Software Engineer with a strong foundation in algorithms, data structures, and high-performance systems development. I specialize in building low-latency, scalable backend services using C++ and Python, with hands-on experience in distributed systems, real-time data processing, and cloud infrastructure. I am passionate about building resilient, high-performance financial and research platforms at scale.
         </p>
-        <p>
-            I have worked at top tech companies like Amazon and Dragonfly Natives, where I have been involved in improving system performance, building full-stack features, and designing scalable backend services.
-        </p>
-    </section>
+    </div>
 
-    <!-- Skills Section -->
-    <section id="skills">
+    <div id="skills" class="tabcontent">
         <h2>Skills</h2>
         <ul>
             <li><strong>Languages:</strong> Python, C/C++, JavaScript, SQL</li>
@@ -34,39 +41,15 @@
             <li><strong>Tools:</strong> Git, Docker, AWS, Linux</li>
             <li><strong>Core CS:</strong> Data Structures, Algorithms, Concurrency, Performance Optimization, System Design</li>
         </ul>
-    </section>
+    </div>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>Experience</h2>
-        <h3>Dragonfly Natives | Software Engineer Intern</h3>
-        <p><strong>May 2025 - Nov 2025</strong></p>
-        <ul>
-            <li>Built and shipped performance-critical full-stack features using C++, Python, and React, directly improving system throughput and user-facing functionality.</li>
-            <li>Designed and implemented scalable backend services, optimizing API latency and enabling reliable data flow for internal operational tools.</li>
-            <li>Developed automation and data pipelines to reduce manual work, improve system reliability, and support data-driven decision workflows.</li>
-            <li>Engineered responsive, high-performance UI components in React, enhancing user experience and reducing interaction time across the platform.</li>
-        </ul>
-        
-        <h3>Amazon | Software Engineer</h3>
-        <p><strong>Oct 2022 - Dec 2023</strong></p>
-        <ul>
-            <li>Built and maintained high-performance backend services in C++ and Python, supporting large-scale, real-time systems used by millions of customers.</li>
-            <li>Improved system reliability, availability, and fault-tolerance through profiling, optimization, and performance-driven engineering.</li>
-            <li>Designed and evolved RESTful microservices on AWS (Lambda, EC2, DynamoDB, S3), ensuring scalability under heavy production traffic.</li>
-            <li>Owned production workflows by writing automated tests, debugging critical issues, and participating in on-call rotations to maintain 24/7 system stability.</li>
-        </ul>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
+    <div id="projects" class="tabcontent">
         <h2>Projects</h2>
         <h3>Matching Engine C++ Trading System</h3>
         <p><strong>Oct 2025</strong></p>
         <ul>
             <li>Built a high-performance C++ matching engine implementing bid/ask order book management, FIFO queues, partial fills, and cancel/modify logic optimized for nanosecond-precision event handling.</li>
             <li>Designed cache-efficient memory layouts, custom containers, and lightweight data structures to reduce latency in real-time execution workloads.</li>
-            <li>Implemented multi-threaded processing, lock-free queues, and deterministic execution to simulate real exchange-style behavior.</li>
             <li>Successfully handled millions of messages per second, aligning with the demands of high-frequency trading systems.</li>
             <li><a href="https://github.com/mchavva413/matching-engine" target="_blank">View Project</a></li>
         </ul>
@@ -75,29 +58,18 @@
         <p><strong>Nov 2025</strong></p>
         <ul>
             <li>Developed a real-time market data feed handler with a C++ core processor, Python tick simulator, and SQLite for durable storage, allowing efficient data capture under tight latency constraints.</li>
-            <li>Designed a high-speed ingestion pipeline to parse and normalize market ticks, ensuring data consistency and low-latency delivery essential for real-time trading systems.</li>
-            <li>Built a live command-line dashboard to monitor market depth updates, latency metrics, and internal queue states for debugging, improving system observability and operational readiness.</li>
+            <li>Built a live command-line dashboard to monitor market depth updates, latency metrics, and internal queue states for debugging.</li>
             <li><a href="https://github.com/mchavva413/real-time-feed-handler" target="_blank">View Project</a></li>
         </ul>
-        
-        <h3>Real-Time Linux Monitoring Dashboard</h3>
-        <p><strong>Nov 2025</strong></p>
-        <ul>
-            <li>Built a real-time infrastructure monitoring dashboard using FastAPI, WebSockets, and React to visualize critical Linux system metrics like CPU, memory, IO, and network performance.</li>
-            <li>Implemented backend to push sub-second updates to the frontend using asynchronous event loops and efficient streaming protocols, ensuring timely data presentation under heavy system loads.</li>
-            <li>Designed a responsive, reactive UI to support scalable data visualization, critical for understanding performance bottlenecks in real-time systems.</li>
-            <li><a href="https://github.com/mchavva413/real-time-linux-monitoring-dashboard" target="_blank">View Project</a></li>
-        </ul>
-    </section>
+    </div>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <div id="contact" class="tabcontent">
         <h2>Contact</h2>
         <p>If you'd like to get in touch or learn more about my work, feel free to reach out!</p>
         <p>Email: <a href="mailto:chavvaakshit9495@gmail.com">chavvaakshit9495@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/akshit-chavva" target="_blank">View LinkedIn</a></p>
         <p>GitHub: <a href="https://github.com/mchavva413" target="_blank">View GitHub</a></p>
-    </section>
+    </div>
 
     <!-- Footer Section -->
     <footer>
